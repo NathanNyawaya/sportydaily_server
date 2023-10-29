@@ -5,7 +5,7 @@ export const fetctPredictions = async (league) => {
     method: "GET",
     url: `https://football_api12.p.rapidapi.com/betting/${league}`,
     headers: {
-      "X-RapidAPI-Key": "a91c39ba04msh138dde153e692afp15cff6jsnbd732b41d133",
+      "X-RapidAPI-Key": process.env.RAPID_API_FREE_KEY,
       "X-RapidAPI-Host": "football_api12.p.rapidapi.com",
     },
   };
@@ -18,4 +18,3 @@ export const fetctPredictions = async (league) => {
     console.error(error);
   }
 };
-
